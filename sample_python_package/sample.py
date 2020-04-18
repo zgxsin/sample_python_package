@@ -9,6 +9,8 @@
 # But it is good to keep it there. Yuo can also use "#!/usr/bin/env python3" to use python3 by default.
 
 import csv
+import os
+
 
 def dataset(path):
     with open(path, 'rU') as data:
@@ -24,5 +26,6 @@ def dataset(path):
 # will interfere with your project. Not only that, it documents to other developers how the code in that
 # file should be used and provides a simple test to check to make sure that you're not creating errors.
 if __name__ == '__main__':
-    for row in dataset('fixtures/calories.csv'):
-        print row[0]
+    path = os.path.join(os.path.dirname(__file__), 'fixtures/calories.csv')
+    for row in dataset(path):
+        print(row[0])

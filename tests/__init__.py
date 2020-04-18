@@ -14,9 +14,9 @@ class InitializationTests(unittest.TestCase):
         Ensure the test suite can import our module
         """
         try:
-            import sample_python_project
+            import sample_python_package
         except ImportError:
-            self.fail("Was not able to import the sample_python_project")
+            self.fail("Was not able to import the src")
 
-# Run this in the project root to test:
-# "nosetests -v --with-coverage --cover-package=sample_python_project --cover-inclusive --cover-erase tests"
+# Run this in the project root from terminal to test:
+# "nosetests -v --with-coverage --cover-package=sample_python_package --cover-inclusive --cover-erase tests"

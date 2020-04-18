@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'sample_python_project'
+project = 'src'
 copyright = '2020, Guoxiang Zhou'
 author = 'Guoxiang Zhou'
 
