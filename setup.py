@@ -32,6 +32,7 @@
 See:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://github.com/pypa/sampleproject
+https://github.com/zgxsin/sample_python_package
 """
 
 # Always prefer setuptools over distutils.
@@ -105,8 +106,7 @@ setup(
     #
     # This field corresponds to the "Home-Page" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#home-page-optional
-    # todo
-    url='https://github.com/pypa/sampleproject',  # Optional
+    url='https://github.com/zgxsin/sample_python_package',  # Optional
 
     # This should be your name or the name of the organization which owns the
     # project.
@@ -250,7 +250,7 @@ setup(
     # what's used to render the link text on PyPI.
     # todo
     project_urls={  # Optional
-        'Source': 'https://github.com/pypa/sampleproject/',
+        'Source': 'https://github.com/zgxsin/sample_python_package',
     },
 )
 
