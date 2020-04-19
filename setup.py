@@ -35,6 +35,12 @@ https://github.com/pypa/sampleproject
 https://github.com/zgxsin/sample_python_package
 """
 
+# ===============================Important Notice=======================================================================
+#  When importing your own defined module, always use the defined top-level package name. Otherwise,
+#  your script (entry_point) will not work after installing the package. In our example,
+#  the defined top-level package is sample_python_package, which contains "__init__.py". You can observe that we use
+#  "from sample_python_package.sample import dataset" in sample_exec.py instead of using "from sample import dataset".
+# ===============================Important Notice=======================================================================
 # Always prefer setuptools over distutils.
 from setuptools import setup, find_packages
 from os import path

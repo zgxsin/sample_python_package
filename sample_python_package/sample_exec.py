@@ -1,4 +1,4 @@
-from sample import dataset
+from sample_python_package.sample import dataset
 import os
 
 
