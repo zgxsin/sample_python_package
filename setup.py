@@ -16,7 +16,7 @@
 
 # Data scientists also typically also have a fixtures directory in which to store data files.
 
-# The src and tests directories are actually Python modules (packages) since they contain the
+# The sample_python_package and tests directories are actually Python modules (packages) since they contain the
 # __init__.py file. You'll put your code in foo and your tests in tests.
 
 # When you finish your project, create your requirements.txt using "pip freeze > requirements.txt" in your project root.
@@ -35,12 +35,6 @@ https://github.com/pypa/sampleproject
 https://github.com/zgxsin/sample_python_package
 """
 
-# ===============================Important Notice=======================================================================
-#  When importing your own defined module, always use the defined top-level package name. Otherwise,
-#  your script (entry_point) will not work after installing the package. In our example,
-#  the defined top-level package is sample_python_package, which contains "__init__.py". You can observe that we use
-#  "from sample_python_package.sample import dataset" in sample_exec.py instead of using "from sample import dataset".
-# ===============================Important Notice=======================================================================
 # Always prefer setuptools over distutils.
 from setuptools import setup, find_packages
 from os import path
@@ -260,6 +254,13 @@ setup(
     },
 )
 
+# ===============================Important Notice=======================================================================
+#  When importing your own defined module, always use the defined top-level package name. Otherwise,
+#  your script (entry_point) will not work after installing the package. In our example,
+#  the defined top-level package is sample_python_package, which contains "__init__.py". You can observe that we use
+#  "from sample_python_package.sample import dataset" in sample_exec.py instead of using "from sample import dataset".
+# ===============================Important Notice=======================================================================
+
 # ======================================================================================
 # Instruction for setup.py
 # ======================================================================================
@@ -268,6 +269,9 @@ setup(
 # Module - A valid python file with .py extension.
 # Distribution - How one package relates to other packages and modules.
 
+# ===================Development =======================================================
+# I recommend to use python virtualenv to develop your python project.
+# Check here: https://guoxiang-zhou.com/understand-python-environment-in-ubuntu-18-04/#Manage_Python_Environment
 # ===================Installation ======================================================
 # https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives.
 # setup.py is Python's answer to a multi-platform installer and is similar to Makefile.
