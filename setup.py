@@ -1,34 +1,7 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-# Project reference: https://medium.com/district-data-labs/how-to-develop-quality-python-code-8209af654d79.
-
-# =============================================================================
-# Below is the explanation of the project structure.
-# =============================================================================
-# The bin directory will contain any executable scripts you intend to build.
-
-# The data folder contains additional data of your project.
-
-# The docs directory contains the Sphinx documentation generator, Python documentation is written in restructuredText,
-# a Markup language similar to Markdown and others. Run "sphinx-quickstart" inside docs folder to
-# generate documentation.
-
-# Data scientists also typically also have a fixtures directory in which to store data files.
-
-# The sample_python_package and tests directories are actually Python modules (packages) since they contain the
-# __init__.py file. You'll put your code in foo and your tests in tests.
-
-# When you finish your project, create your requirements.txt using "pip freeze > requirements.txt" in your project root.
-
-# The setup.py script is a Python setuptools or distutils installation script and will allow you to configure your
-# project for deployment. It will use the requirements.txt to specify the third party dependencies required to
-# implement your project. Other developers will also use these files to create their development environments.
-
-# Here is a tool to help you create the project template: https://github.com/cookiecutter/cookiecutter.
-
 """A setuptools based setup module.
-
 See:
 https://packaging.python.org/guides/distributing-packages-using-setuptools/
 https://github.com/pypa/sampleproject
@@ -254,56 +227,6 @@ setup(
     },
 )
 
-# ===============================Important Notice=======================================================================
-#  When importing your own defined module, always use the defined top-level package name. Otherwise,
-#  your script (entry_point) will not work after installing the package. In our example,
-#  the defined top-level package is sample_python_package, which contains "__init__.py". You can observe that we use
-#  "from sample_python_package.sample import dataset" in sample_exec.py instead of using "from sample import dataset".
-# ===============================Important Notice=======================================================================
 
-# ======================================================================================
-# Instruction for setup.py
-# ======================================================================================
-# Let's start with some definitions:
-# Package - A folder/directory that contains __init__.py file.
-# Module - A valid python file with .py extension.
-# Distribution - How one package relates to other packages and modules.
-
-# ===================Development =======================================================
-# I recommend to use python virtualenv to develop your python project.
-# Check here: https://guoxiang-zhou.com/understand-python-environment-in-ubuntu-18-04/#Manage_Python_Environment
-# ===================Installation ======================================================
-# https://packaging.python.org/tutorials/packaging-projects/#generating-distribution-archives.
-# setup.py is Python's answer to a multi-platform installer and is similar to Makefile.
-# If you’re familiar with command line installations, then make && make install translates to
-# python setup.py build && python setup.py install.
-# Best practice: use pip. It only offers improvements over using python setup.py install.
-# Refer to:
-# https://stackoverflow.com/questions/15724093/difference-between-python-setup-py-install-and-pip-install/15731459.
-
-# Run "pip install ." in your project root to install this
-# package "sample-python-project". It will use setup.py to install this package. Run "pip show sample-python-project"
-#  to verify the installation.
-
-# ===================Distribution =======================================================
-# 1. Before you begin, make sure you have the latest versions of setuptools and wheel:
-# pip install --upgrade setuptools wheel. This will generate distribution archives in the dist directory.
-
-# 2. To build a setuptools project, run this command from the same directory where setup.py is located:
-# python setup.py sdist bdist_wheel
-
-# 3. Before you upload the generated archives make sure you’re registered on https://test.pypi.org/account/register/.
-# You will also need to verify your email to be able to upload any packages.
-# You should install twine to be able to upload packages:You should install twine to be able to upload packages:
-# pip install --upgrade twine
-
-# 4. Now, to upload these archives, run:
-# twine upload --repository-url https://test.pypi.org/legacy/ dist/*
-
-# 5. To install your newly uploaded package example_pkg, you can use pip:
-# pip install --index-url https://test.pypi.org/simple/ sample_python_package
-
-# 6. Follow the link below to upload a real package to the Python Package Index :
-# https://packaging.python.org/tutorials/packaging-projects/#next-steps.
 
 
